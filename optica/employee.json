@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "61f14f9ca09bd2f6202501b3"
+  },
+  "nombre": "Antonio",
+  "apellido1": "Lopez",
+  "apellido2": "Fernandez",
+  "direccion": "C/Vegas 52, 08004 Barcelona",
+  "contacto": [
+    {
+      "telefono": 634625463,
+      "email": "antonio_lofe@hotmail.com"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61f14fada09bd2f6202501b4"
+  },
+  "nombre": "Sofia",
+  "apellido1": "Martinez",
+  "apellido2": "Perez",
+  "direccion": "C/Valencia 45, 08005 Barcelona",
+  "contacto": [
+    {
+      "telefono": 645364746,
+      "email": "sofia_marperez@gmail.com"
+    }
+  ]
+}]

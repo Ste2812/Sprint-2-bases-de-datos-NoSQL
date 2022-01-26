@@ -15,7 +15,17 @@
   "fecha_registro": {
     "$date": "2021-06-11T22:00:00Z"
   },
-  "recomendado_por_cliente": null
+  "recomendado_por_cliente": null,
+  "venta": [
+    {
+      "producto": {
+        "$oid": "61f1339fa09bd2f6202501ad"
+      },
+      "vendedor": {
+        "$oid": "61f14f9ca09bd2f6202501b3"
+      }
+    }
+  ]
 },{
   "_id": {
     "$oid": "61f13532a09bd2f6202501b1"
@@ -35,7 +45,17 @@
   },
   "recomendado_por_cliente": {
     "$oid": "61f134f1a09bd2f6202501b0"
-  }
+  },
+  "venta": [
+    {
+      "producto": {
+        "$oid": "61f1342da09bd2f6202501af"
+      },
+      "vendedor": {
+        "$oid": "61f14fada09bd2f6202501b4"
+      }
+    }
+  ]
 },{
   "_id": {
     "$oid": "61f13585a09bd2f6202501b2"
@@ -55,5 +75,15 @@
   },
   "recomendado_por_cliente": {
     "$oid": "61f13532a09bd2f6202501b1"
-  }
+  },
+  "venta": [
+    {
+      "producto": {
+        "$oid": "61f133dba09bd2f6202501ae"
+      },
+      "vendedor": {
+        "$oid": "61f14fada09bd2f6202501b4"
+      }
+    }
+  ]
 }]
