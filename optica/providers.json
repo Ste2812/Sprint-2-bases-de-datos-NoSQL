@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "61f12fcda09bd2f6202501aa"
+  },
+  "nombre": "UniversOptics",
+  "direccion": "C/Bilbao 13, 08020 Barcelona(España)",
+  "nif": "B65639155",
+  "brands": [
+    "nike",
+    "rayban"
+  ],
+  "contacto": [
+    {
+      "telefono": 930232425,
+      "fax": 930232562
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61f1305fa09bd2f6202501ab"
+  },
+  "nombre": "proveedores.com",
+  "direccion": "C/Roma 246, 08002 Barcelona(España)",
+  "nif": "B94573928",
+  "brands": [
+    "rayban",
+    "nike",
+    "police"
+  ],
+  "contacto": [
+    {
+      "telefono": 910343536,
+      "fax": 910343756
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61f13088a09bd2f6202501ac"
+  },
+  "nombre": "Optica Toscana",
+  "direccion": "C/valencia 34, 08031 Barcelona(España)",
+  "nif": "B45875675",
+  "brands": [
+    "police",
+    "rayban",
+    "nike"
+  ],
+  "contacto": [
+    {
+      "telefono": 675909292,
+      "fax": 920457648
+    }
+  ]
+}]

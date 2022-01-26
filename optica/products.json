@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "61f1339fa09bd2f6202501ad"
+  },
+  "marca": "rayban",
+  "especificaciones": [
+    {
+      "graduacion_lente": 4.25,
+      "tipo_montura": "metalica",
+      "color_montura": "negro",
+      "color_lente": "transparente"
+    }
+  ],
+  "precio": 175.45,
+  "stock": "en stock",
+  "ref_provider": {
+    "$oid": "61f1305fa09bd2f6202501ab"
+  }
+},{
+  "_id": {
+    "$oid": "61f133dba09bd2f6202501ae"
+  },
+  "marca": "police",
+  "especificaciones": [
+    {
+      "graduacion_lente": 3.5,
+      "tipo_montura": "pasta",
+      "color_montura": "gris",
+      "color_lente": "transparente"
+    }
+  ],
+  "precio": 150.99,
+  "stock": "en stock",
+  "ref_provider": {
+    "$oid": "61f13088a09bd2f6202501ac"
+  }
+},{
+  "_id": {
+    "$oid": "61f1342da09bd2f6202501af"
+  },
+  "marca": "nike",
+  "especificaciones": [
+    {
+      "graduacion_lente": 2.25,
+      "tipo_montura": "flotante",
+      "color_montura": "marron",
+      "color_lente": "gris"
+    }
+  ],
+  "precio": 130.4,
+  "stock": "sin stock",
+  "ref_provider": {
+    "$oid": "61f12fcda09bd2f6202501aa"
+  }
+}]

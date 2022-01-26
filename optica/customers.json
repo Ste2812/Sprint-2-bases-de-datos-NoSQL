@@ -1,0 +1,59 @@
+[{
+  "_id": {
+    "$oid": "61f134f1a09bd2f6202501b0"
+  },
+  "nombre": "Juan",
+  "apellido1": "Gonzales",
+  "apellido2": "Gonzales",
+  "direccion_postal": "C/Lluria 56, 08015 Barcelona",
+  "datos_contacto": [
+    {
+      "telefono": 675438584,
+      "email": null
+    }
+  ],
+  "fecha_registro": {
+    "$date": "2021-06-11T22:00:00Z"
+  },
+  "recomendado_por_cliente": null
+},{
+  "_id": {
+    "$oid": "61f13532a09bd2f6202501b1"
+  },
+  "nombre": "Montse",
+  "apellido1": "Garcia",
+  "apellido2": "Perez",
+  "direccion_postal": "C/Civitavecchia 79, 08034 Barcelona",
+  "datos_contacto": [
+    {
+      "telefono": 614564654,
+      "email": "montgaper@gmail.com"
+    }
+  ],
+  "fecha_registro": {
+    "$date": "2021-06-22T22:00:00Z"
+  },
+  "recomendado_por_cliente": {
+    "$oid": "61f134f1a09bd2f6202501b0"
+  }
+},{
+  "_id": {
+    "$oid": "61f13585a09bd2f6202501b2"
+  },
+  "nombre": "John",
+  "apellido1": "Farrell",
+  "apellido2": null,
+  "direccion_postal": null,
+  "datos_contacto": [
+    {
+      "telefono": 39711713070,
+      "email": "john_farr@gmail.com"
+    }
+  ],
+  "fecha_registro": {
+    "$date": "2021-06-25T22:00:00Z"
+  },
+  "recomendado_por_cliente": {
+    "$oid": "61f13532a09bd2f6202501b1"
+  }
+}]
