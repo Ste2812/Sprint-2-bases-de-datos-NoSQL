@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "61f29bb9a09bd2f6202501bb"
+  },
+  "id_localidad": 1,
+  "nombre": "Catalunya"
+},{
+  "_id": {
+    "$oid": "61f29bc3a09bd2f6202501bc"
+  },
+  "id_localidad": 2,
+  "nombre": "Madrid"
+},{
+  "_id": {
+    "$oid": "61f29bcaa09bd2f6202501bd"
+  },
+  "id_localidad": 3,
+  "nombre": "Castellon"
+}]

@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "61f298c3a09bd2f6202501b5"
+  },
+  "id_tienda": "084",
+  "nombre": "La pummarola",
+  "direccion": {
+    "calle": "C/ los alpes",
+    "numero": 37,
+    "codigo_postal": 8032,
+    "localidad": "Barcelona",
+    "provincia": "Catalunya"
+  },
+  "ref_localidad": {
+    "$oid": "61f29bb9a09bd2f6202501bb"
+  }
+},{
+  "_id": {
+    "$oid": "61f299dca09bd2f6202501b6"
+  },
+  "id_tienda": "047",
+  "nombre": "Pizzeria Roma",
+  "direccion": {
+    "calle": "C/ Mayor",
+    "numero": 75,
+    "codigo_postal": 28002,
+    "localidad": "Madrid",
+    "provincia": "Madrid"
+  },
+  "ref_localidad": {
+    "$oid": "61f29bc3a09bd2f6202501bc"
+  }
+},{
+  "_id": {
+    "$oid": "61f2a052a09bd2f6202501cd"
+  },
+  "id_tienda": "021",
+  "nombre": "Pizzeria Italia",
+  "direccion": {
+    "calle": "C/ Lorca",
+    "numero": 56,
+    "codigo_postal": 12100,
+    "localidad": "Las Acacias",
+    "provincia": "Castellon"
+  },
+  "ref_localidad": {
+    "$oid": "61f29bcaa09bd2f6202501bd"
+  }
+}]

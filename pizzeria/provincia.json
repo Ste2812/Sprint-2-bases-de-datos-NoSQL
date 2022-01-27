@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "61f29bd5a09bd2f6202501be"
+  },
+  "id_provincia": 126,
+  "nombre": "Barcelona",
+  "ref_localidad": {
+    "$oid": "61f29bb9a09bd2f6202501bb"
+  }
+},{
+  "_id": {
+    "$oid": "61f29be2a09bd2f6202501bf"
+  },
+  "id_provincia": 127,
+  "nombre": "Madrid",
+  "ref_localidad": {
+    "$oid": "61f29bc3a09bd2f6202501bc"
+  }
+},{
+  "_id": {
+    "$oid": "61f29beaa09bd2f6202501c0"
+  },
+  "id_provincia": 128,
+  "nombre": "Castellon",
+  "ref_localidad": {
+    "$oid": "61f29bcaa09bd2f6202501bd"
+  }
+}]

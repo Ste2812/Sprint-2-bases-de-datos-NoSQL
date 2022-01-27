@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MongoDb" id="Project-1ec1" database="MongoDb" >
+	<schema name="pizzeria" >
+		<table name="clientes" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_cliente" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="apellido1" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="apellido2" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="direccion" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="calle" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="numero" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="codigo_postal" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="localidad" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="provincia" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="telefono" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="ref_localidad" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="localidad" >
+				<fk_column name="ref_localidad" pk="_id" />
+			</fk>
+		</table>
+		<table name="empleados" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_empleado" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="apellido1" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="apellido2" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="nif" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="telefono" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="tipo" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="ref_tienda" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="tiendas" >
+				<fk_column name="ref_tienda" pk="_id" />
+			</fk>
+		</table>
+		<table name="localidad" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_localidad" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="pedidos" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_pedido" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="fecha_hora" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+			<column name="tipo_entrega" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="productos" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="id_producto" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="cantidad" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			</column>
+			<column name="total" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="cliente_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="empleado_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="clientes" >
+				<fk_column name="cliente_id" pk="_id" />
+			</fk>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="empleados" >
+				<fk_column name="empleado_id" pk="_id" />
+			</fk>
+		</table>
+		<table name="producto" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_producto" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="categoria" type="object" length="800" decimal="0" jt="4999544" >
+				<column name="pizza" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="descripción" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="precio" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="imagen" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="provincia" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_provincia" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="ref_localidad" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="localidad" >
+				<fk_column name="ref_localidad" pk="_id" />
+			</fk>
+		</table>
+		<table name="tiendas" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id_tienda" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="nombre" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="direccion" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="calle" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="numero" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="codigo_postal" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="localidad" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="provincia" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="ref_localidad" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="pizzeria" to_table="localidad" >
+				<fk_column name="ref_localidad" pk="_id" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="MongoDb" database="MongoDb" driver_class="com.dbschema.MongoJdbcDriver" driver_jar="mongojdbc4.0.jar" driver_desc="No Authentication" host="localhost" port="27017" user="admin" />
+	<layout name="Main Layout" id="Layout-1879" show_column_type="y" show_relation="name" >
+		<entity schema="pizzeria" name="producto" column="categoria" color="BED3F4" x="256" y="368" />
+		<entity schema="pizzeria" name="clientes" color="C7F4BE" x="464" y="208" />
+		<entity schema="pizzeria" name="clientes" column="direccion" color="C7F4BE" x="656" y="208" />
+		<entity schema="pizzeria" name="tiendas" column="direccion" color="D1BEF4" x="1040" y="704" />
+		<entity schema="pizzeria" name="empleados" color="BED3F4" x="144" y="656" />
+		<entity schema="pizzeria" name="localidad" color="C7F4BE" x="496" y="688" />
+		<entity schema="pizzeria" name="pedidos" color="BEBEF4" x="912" y="336" />
+		<entity schema="pizzeria" name="producto" color="BED3F4" x="48" y="368" />
+		<entity schema="pizzeria" name="pedidos" column="productos" color="BEBEF4" x="1136" y="336" />
+		<entity schema="pizzeria" name="provincia" color="F4DDBE" x="144" y="80" />
+		<entity schema="pizzeria" name="tiendas" color="D1BEF4" x="848" y="704" />
+		<group name="Collection &#039;provincia&#039;" color="F7F2EC" >
+			<entity schema="pizzeria" name="provincia" />
+		</group>
+		<group name="Collection &#039;empleados&#039;" color="ECF0F7" >
+			<entity schema="pizzeria" name="empleados" />
+		</group>
+		<group name="Collection &#039;producto&#039;" color="ECF0F7" >
+			<entity schema="pizzeria" name="producto" />
+			<entity schema="pizzeria" name="producto" column="categoria" />
+		</group>
+		<group name="Collection &#039;localidad&#039;" color="EEF7EC" >
+			<entity schema="pizzeria" name="localidad" />
+		</group>
+		<group name="Collection &#039;clientes&#039;" color="EEF7EC" >
+			<entity schema="pizzeria" name="clientes" column="direccion" />
+			<entity schema="pizzeria" name="clientes" />
+		</group>
+		<group name="Collection &#039;productos&#039;" color="ECECF7" >
+			<entity schema="pizzeria" name="pedidos" column="productos" />
+			<entity schema="pizzeria" name="pedidos" />
+		</group>
+		<group name="Collection &#039;tiendas&#039;" color="F0ECF7" >
+			<entity schema="pizzeria" name="tiendas" column="direccion" />
+			<entity schema="pizzeria" name="tiendas" />
+		</group>
+	</layout>
+	<layout name="~Layout with Sample Tools" id="Layout-15c8" show_column_type="y" show_relation="name" >
+		<entity schema="pizzeria" name="producto" column="categoria" color="BED3F4" x="256" y="352" />
+		<entity schema="pizzeria" name="clientes" color="C7F4BE" x="496" y="336" />
+		<entity schema="pizzeria" name="clientes" column="direccion" color="C7F4BE" x="688" y="336" />
+		<entity schema="pizzeria" name="tiendas" column="direccion" color="D1BEF4" x="1168" y="656" />
+		<entity schema="pizzeria" name="empleados" color="BED3F4" x="208" y="656" />
+		<entity schema="pizzeria" name="localidad" color="C7F4BE" x="496" y="656" />
+		<entity schema="pizzeria" name="pedidos" color="BEBEF4" x="976" y="336" />
+		<entity schema="pizzeria" name="producto" color="BED3F4" x="48" y="352" />
+		<entity schema="pizzeria" name="pedidos" column="productos" color="BEBEF4" x="1200" y="336" />
+		<entity schema="pizzeria" name="provincia" color="F4DDBE" x="208" y="80" />
+		<entity schema="pizzeria" name="tiendas" color="D1BEF4" x="976" y="656" />
+		<group name="provincia" color="F7F2EC" >
+			<entity schema="pizzeria" name="provincia" />
+		</group>
+		<group name="empleados" color="ECF0F7" >
+			<entity schema="pizzeria" name="empleados" />
+		</group>
+		<group name="producto" color="ECF0F7" >
+			<entity schema="pizzeria" name="producto" />
+			<entity schema="pizzeria" name="producto" column="categoria" />
+		</group>
+		<group name="localidad" color="EEF7EC" >
+			<entity schema="pizzeria" name="localidad" />
+		</group>
+		<group name="direccion" color="EEF7EC" >
+			<entity schema="pizzeria" name="clientes" column="direccion" />
+			<entity schema="pizzeria" name="clientes" />
+		</group>
+		<group name="productos" color="ECECF7" >
+			<entity schema="pizzeria" name="pedidos" column="productos" />
+			<entity schema="pizzeria" name="pedidos" />
+		</group>
+		<group name="direccion" color="F0ECF7" >
+			<entity schema="pizzeria" name="tiendas" column="direccion" />
+			<entity schema="pizzeria" name="tiendas" />
+		</group>
+		<script name="Query Editor" id="Editor-1773" language="SQL" >
+			<string><![CDATA[pizzeria.clientes.find()
+
+//OR
+
+USE pizzeria;
+db.clientes.find()
+
+//OR
+
+USE pizzeria;
+db.getCollection('clientes').find()]]></string>
+		</script>
+		<browser id="Browse-1be7" name="Relational Data Explorer" confirm_updates="y" >
+			<browse_table schema="pizzeria" entity="clientes" x="20" y="20" width="400" height="300" record_view="y" >
+				<browse_table schema="pizzeria" entity="localidad" fk="Virtual Relation" x="440" y="20" width="500" height="350" record_view="y" >
+					<browse_table schema="pizzeria" entity="provincia" fk="Virtual Relation" x="960" y="20" width="500" height="350" record_view="y" />
+				</browse_table>
+			</browse_table>
+		</browser>
+		<query id="Query-171c" name="Query Builder" >
+			<query_table schema="pizzeria" name="clientes" alias="clientes" x="48" y="48" >
+				<column name="_id" />
+				<column name="id_cliente" />
+				<column name="nombre" />
+				<column name="apellido1" />
+				<column name="apellido2" />
+				<column name="direccion" />
+				<column name="telefono" />
+				<column name="ref_localidad" />
+				<query_table schema="pizzeria" name="localidad" alias="localidad" x="240" y="48" fk="Virtual Relation" type="Inner Join" >
+					<column name="_id" />
+					<column name="id_localidad" />
+					<column name="nombre" />
+					<query_table schema="pizzeria" name="provincia" alias="provincia" x="432" y="48" fk="Virtual Relation" type="Inner Join" >
+						<column name="_id" />
+						<column name="id_provincia" />
+						<column name="nombre" />
+						<column name="ref_localidad" />
+					</query_table>
+				</query_table>
+			</query_table>
+		</query>
+		<form name="Analytic Application" id="Report-1489" template="Page" css="container-fluid" view="frame" >
+			<var name="samplePageNumber" type="4" value="0" mandatory="n" />
+			<var name="sampleRecordsPerPage" type="4" value="100" mandatory="n" />
+			<body name="Body" template="Grid" pos="0,0,0,0,f,f" layout="{{-2,-2,-2,-2,-1},{-2,-2,-2,-2,-2}}" scroll="n" html="n" >
+				<cell type="label" name="Clientes Data" template="H3" pos="0,0,1,0,l,c" />
+				<cell type="label" name="Each cell (rectangle) may contain one component: label, charts, buttons, text fields. &#10;&lt;br&gt;A table is also a component, used to render the data from a data source, and which has its own cells.&#10;&lt;br&gt;Double-click a cell to edit. Insert new rows, columns or merge cells from the cell context menu." pos="0,1,3,1,l,c" />
+				<cell type="chart" name="Pie" template="Pie" pos="0,2,4,2,l,c" max_records="20" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="_id" type="-8" />
+						<var name="id_cliente" type="8" />
+						<var name="nombre" />
+						<var name="apellido1" />
+						<var name="apellido2" />
+						<var name="direccion" type="4999544" />
+						<var name="telefono" type="8" />
+						<var name="ref_localidad" type="-8" />
+						<script ><![CDATA[pizzeria.clientes.find()]]></script>
+					</form_script>
+					<param name="i0" value="apellido2" />
+					<param name="width" value="100%" />
+					<param name="v0" value="telefono" />
+					<param name="title" value="Sample Chart" />
+					<param name="height" value="400px" />
+				</cell>
+				<tableview name="sample" template="Table" css="table table-striped table-sm table-hover" pos="0,3,4,3,f,f" layout="{{-2,-2,-2,-2,-2,-2,-2},{-2,-2}}" scroll="n" html="n" header_rows="1" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="_id" type="-8" />
+						<var name="id_cliente" type="8" />
+						<var name="nombre" />
+						<var name="apellido1" />
+						<var name="apellido2" />
+						<var name="direccion" type="4999544" />
+						<var name="telefono" type="8" />
+						<var name="ref_localidad" type="-8" />
+						<script ><![CDATA[pizzeria.clientes.find()]]></script>
+					</form_script>
+					<cell type="label" name="_id" pos="0,0,0,0,c,c" />
+					<cell type="label" name="id_cliente" pos="1,0,1,0,c,c" />
+					<cell type="label" name="nombre" pos="2,0,2,0,c,c" />
+					<cell type="label" name="apellido1" pos="3,0,3,0,c,c" />
+					<cell type="label" name="apellido2" pos="4,0,4,0,c,c" />
+					<cell type="label" name="direccion" pos="5,0,5,0,c,c" />
+					<cell type="label" name="Button can open other pages." pos="6,0,6,0,c,c" />
+					<cell type="label" name="${_id}" template="Plain" pos="0,1,0,1,l,c" />
+					<cell type="label" name="${id_cliente}" template="Plain" pos="1,1,1,1,l,c" />
+					<cell type="label" name="${nombre}" template="Plain" pos="2,1,2,1,l,c" />
+					<cell type="label" name="${apellido1}" template="Plain" pos="3,1,3,1,l,c" />
+					<cell type="label" name="${apellido2}" template="Plain" pos="4,1,4,1,l,c" />
+					<cell type="label" name="${direccion}" template="Plain" pos="5,1,5,1,l,c" />
+					<cell type="button" name="More" template="Plain" css="btn btn-default btn-success" pos="6,1,6,1,c,c" ref_id="Report-1489" />
+				</tableview>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="0,4,0,4,l,c" glyph="FA-ANGLE_DOUBLE_LEFT" ref_id="Report-1489" >
+					<var name="samplePageNumber" value="0" />
+				</cell>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="1,4,1,4,l,c" glyph="FA-ANGLE_LEFT" ref_id="Report-1489" >
+					<var name="samplePageNumber" value="${Math.max(0,samplePageNumber-1)}" />
+				</cell>
+				<cell type="label" name="Page ${samplePageNumber+1}" pos="2,4,2,4,l,c" />
+				<cell type="href" name="" disabled="${!sampleHasNextPage}" pos="3,4,3,4,l,c" glyph="FA-ANGLE_RIGHT" ref_id="Report-1489" >
+					<var name="samplePageNumber" value="${( samplePageNumber+1 )}" />
+				</cell>
+			</body>
+		</form>
+	</layout>
+</project>

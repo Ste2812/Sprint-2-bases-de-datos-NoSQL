@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "61f29b73a09bd2f6202501b7"
+  },
+  "id_cliente": 1,
+  "nombre": "Jose",
+  "apellido1": "Lopez",
+  "apellido2": "Perez",
+  "direccion": {
+    "calle": "C/ roma",
+    "numero": 56,
+    "codigo_postal": 8012,
+    "localidad": "Barcelona",
+    "provincia": "Catalunya"
+  },
+  "telefono": 654432432,
+  "ref_localidad": {
+    "$oid": "61f29bb9a09bd2f6202501bb"
+  }
+},{
+  "_id": {
+    "$oid": "61f29b93a09bd2f6202501b8"
+  },
+  "id_cliente": 2,
+  "nombre": "Antonio",
+  "apellido1": "De la vega",
+  "apellido2": "Gonzalez",
+  "direccion": {
+    "calle": "C/ Napoleon",
+    "numero": 45,
+    "codigo_postal": 8301,
+    "localidad": "Mataro",
+    "provincia": "Catalunya"
+  },
+  "telefono": 632756756,
+  "ref_localidad": {
+    "$oid": "61f29bb9a09bd2f6202501bb"
+  }
+},{
+  "_id": {
+    "$oid": "61f29b9ea09bd2f6202501b9"
+  },
+  "id_cliente": 3,
+  "nombre": "Ernesto",
+  "apellido1": "Sanchez",
+  "apellido2": "Rodriguez",
+  "direccion": {
+    "calle": "C/ Valencia",
+    "numero": 123,
+    "codigo_postal": 12140,
+    "localidad": "Albocasser",
+    "provincia": "Castellon"
+  },
+  "telefono": 915456756,
+  "ref_localidad": {
+    "$oid": "61f29bcaa09bd2f6202501bd"
+  }
+},{
+  "_id": {
+    "$oid": "61f29ba8a09bd2f6202501ba"
+  },
+  "id_cliente": 4,
+  "nombre": "Sofia",
+  "apellido1": "Jimenez",
+  "apellido2": "Martin",
+  "direccion": {
+    "calle": "C/ Lisboa",
+    "numero": 89,
+    "codigo_postal": 28001,
+    "localidad": "Madrid",
+    "provincia": "Madrid"
+  },
+  "telefono": 654543654,
+  "ref_localidad": {
+    "$oid": "61f29bc3a09bd2f6202501bc"
+  }
+}]

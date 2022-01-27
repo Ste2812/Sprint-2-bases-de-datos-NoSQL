@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "61f2b044a09bd2f6202501ce"
+  },
+  "id_empleado": 1,
+  "nombre": "Juan",
+  "apellido1": "Lopez",
+  "apellido2": "Garcia",
+  "nif": "78756543Y",
+  "telefono": 654345434,
+  "tipo": "cocina",
+  "ref_tienda": {
+    "$oid": "61f298c3a09bd2f6202501b5"
+  }
+},{
+  "_id": {
+    "$oid": "61f2b0b8a09bd2f6202501cf"
+  },
+  "id_empleado": 2,
+  "nombre": "Jose",
+  "apellido1": "Hernandez",
+  "apellido2": "Perez",
+  "nif": "67875432Y",
+  "telefono": 687656545,
+  "tipo": "cocina",
+  "ref_tienda": {
+    "$oid": "61f299dca09bd2f6202501b6"
+  }
+},{
+  "_id": {
+    "$oid": "61f2b0eea09bd2f6202501d0"
+  },
+  "id_empleado": 3,
+  "nombre": "John",
+  "apellido1": "Connor",
+  "apellido2": null,
+  "nif": "Y4356765b",
+  "telefono": 734543456,
+  "tipo": "delivery",
+  "ref_tienda": {
+    "$oid": "61f299dca09bd2f6202501b6"
+  }
+},{
+  "_id": {
+    "$oid": "61f2b0ffa09bd2f6202501d1"
+  },
+  "id_empleado": 4,
+  "nombre": "Mercedes",
+  "apellido1": "Sanchez",
+  "apellido2": "Martinez",
+  "nif": "87587456Y",
+  "telefono": 645323456,
+  "tipo": "delivery",
+  "ref_tienda": {
+    "$oid": "61f2a052a09bd2f6202501cd"
+  }
+}]
