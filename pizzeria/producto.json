@@ -1,0 +1,9 @@
+{"_id":{"$oid":"61f90a5fc043819951e08bf1"},"id_producto":245,"nombre":"La carnivora","categoria":"hamburguer","descripción":null,"precio":7.6,"imagen":null}
+{"_id":{"$oid":"61f90a6ac043819951e08bf2"},"id_producto":246,"nombre":"Black Angus","categoria":"hamburguer","descripción":null,"precio":10.2,"imagen":null}
+{"_id":{"$oid":"61f90a8bc043819951e08bf3"},"id_producto":247,"nombre":"La vegana","categoria":"hamburguer","descripción":null,"precio":6.6,"imagen":null}
+{"_id":{"$oid":"61f90a98c043819951e08bf4"},"id_producto":248,"nombre":"pizza margherita","categoria":{"pizza":"fijo_en_carta"},"descripción":null,"precio":10.2,"imagen":null}
+{"_id":{"$oid":"61f90aa3c043819951e08bf5"},"id_producto":249,"nombre":"pizza amatriciana","categoria":{"pizza":"fijo_en_carta"},"descripción":null,"precio":12.4,"imagen":null}
+{"_id":{"$oid":"61f90aaec043819951e08bf6"},"id_producto":250,"nombre":"pizza 4 stagioni","categoria":{"pizza":"temporal"},"descripción":null,"precio":11.5,"imagen":null}
+{"_id":{"$oid":"61f90abfc043819951e08bf7"},"id_producto":251,"nombre":"pizza Napoletana","categoria":{"pizza":"temporal"},"descripción":null,"precio":10.9,"imagen":null}
+{"_id":{"$oid":"61f90acfc043819951e08bf8"},"id_producto":252,"nombre":"cerveza IPA","categoria":"bebida","descripción":null,"precio":4.5,"imagen":null}
+{"_id":{"$oid":"61f90adec043819951e08bf9"},"id_producto":253,"nombre":"refresco cola","categoria":"bebida","descripción":null,"precio":2.5,"imagen":null}
